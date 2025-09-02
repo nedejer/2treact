@@ -24,6 +24,12 @@ a:hover {
     margin: 0 auto;
 }
 
+/* 
+
+NAV 
+
+*/
+
 .nav__row {
     display: flex;
     justify-content: space-between;
@@ -77,3 +83,4 @@ a:hover {
     border-image: initial;
     transition: 300ms;
 }
+
