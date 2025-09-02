@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@400;700&family=Quicksand:wght@300..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 * {
-    color: red;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: inter, sans-serif;
+    color: rgb(36, 62, 99)
+}
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: all 300ms ease;
+}
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+    margin: 8px 0;
+}
+.nav__logo--img {
+    height: 40px;
+    width: 40px;
+}
+
+.nav__logo--title {
+    font-weight: 900;
+    font-size: 24px;
+    margin-left: 12px;
+    padding-bottom: 2px;
+    letter-spacing: 0.6px;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link {
+    font-size: 14;
+    font-weight: 600;
+    padding-top: 4px;
+    letter-spacing: 0.35px;
+    margin: 0 24px;
+    border-bottom: 2px solid transparent;
+    transition: 300ms;
+}
+
+.nav__link--primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 21, 255);
+    line-height: 1.5;
+    width: auto;
+    margin: 2px 0px 0px;
+    padding: 10px 32px;
+    border-radius: 9999px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    transition: 300ms;
 }
