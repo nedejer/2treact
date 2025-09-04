@@ -183,3 +183,22 @@ p {
     max-width: 768px;
 }
 
+/*
+
+FEATURES
+
+*/
+
+section {
+    padding: 0 32px;
+}
+
+.container {
+    padding: 96px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
