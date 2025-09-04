@@ -136,4 +136,50 @@ p {
     width: 100%;
     border-radius: 500px;
     border: 2px solid rgb(229, 231, 235);
+    padding: 20px 192px 20px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
 }
+
+.header__email__btn {
+    z-index: 2;
+    margin: 8px;
+    height: calc(100% - 16px);
+    border-radius: 500px;
+    width: 160px;
+    border: none;
+    background-color: #6415ff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 300ms ease;
+}
+
+.header__customers--title {
+    margin-top: 80px;
+    color: #a0aec0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6;
+}
+
+.header__customers {
+    margin-top: 16px;
+    max-width: 100%;
+    padding-right: 0;
+    opacity: 0.5;
+}
+
+.header__img--wrapper {
+    width: calc(100% - 40%);
+}
+
+.header__img {
+    width: 100%;
+    max-width: 768px;
+}
+
