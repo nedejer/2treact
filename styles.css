@@ -473,3 +473,7 @@ VALUES
     color: #718096;
 }
 
+#values .btn {
+    margin-top: 48px;
+}
+
