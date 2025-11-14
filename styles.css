@@ -802,6 +802,15 @@ ease;
     align-items: center;
 }
 
+.start__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  text-align: center;     
+  gap: 1.5rem;            
+}
+
+
 .start__title {
     color: #f7fafc;
     font-size: 30px;
