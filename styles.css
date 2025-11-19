@@ -54,6 +54,11 @@ NAV
 
 */
 
+nav {
+    padding-top: 32px;
+    display: flex;
+}
+
 .nav__row {
     display: flex;
     justify-content: space-between;
@@ -320,6 +325,9 @@ QUALITY
     display: block;
   }
   
+  #quality .btn {
+    margin-top: 32px;
+}
 
   
 
@@ -419,6 +427,14 @@ VALUES
 
 .values__description, .values__img {
     width: 50%;
+}
+
+.value:nth-child(1) .value__img--wrapper {
+    background-color: #9ae6b4;
+}
+
+.value:nth-child(2) .value__img--wrapper {
+    background-color: #feb2b2;
 }
 
 .values__description {
@@ -699,6 +715,13 @@ TESTIMONIALS
     color: rgba(246, 173, 85);
     margin-right: 2px;
     margin-top: 4px;
+}
+
+.fa-star {
+    color: rgb(246 173 85);
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
 }
 
 .testimonial__title {
