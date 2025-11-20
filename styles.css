@@ -113,6 +113,14 @@ nav {
     transition: 300ms;
 }
 
+.btn__menu {
+    background-color: transparent;
+    border: none;
+    display: none;
+    transition: all 300ms 
+ease;
+}
+
 /*
 
 HEADER
@@ -167,19 +175,7 @@ p {
     z-index: 1;
 }
 
-.header__email__btn {
-    z-index: 2;
-    margin: 8px;
-    height: calc(100% - 16px);
-    border-radius: 500px;
-    width: 160px;
-    border: none;
-    background-color: #6415ff;
-    color: #fff;
-    font-weight: 700;
-    font-size: 16px;
-    transition: all 300ms ease;
-}
+
 
 .header__customers--title {
     margin-top: 80px;
@@ -269,12 +265,14 @@ FEATURES
 
 .feature__row{
 display: flex;
-align-items: flex-start;
+align-items: center;
 padding: 32px 24px;
 }
 
 .img__feature--wrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     border: 1px solid #e5e7eb;
     border-radius: 500px;
@@ -805,6 +803,12 @@ TESTIMONIALS
 ease;
 }
 
+/*
+
+START
+
+*/
+
 .start__container {
     padding: 96px 0;
     width: 100%;
@@ -825,13 +829,6 @@ ease;
     align-items: center;
 }
 
-.start__row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;    
-  text-align: center;     
-  gap: 1.5rem;            
-}
 
 
 .start__title {
@@ -844,7 +841,7 @@ ease;
 
 .start__buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .start__button:nth-child(1) {
@@ -859,6 +856,19 @@ ease;
     border: 1px solid rgb(160, 174, 192);
     transition: all 300ms 
 ease;
+}
+
+.start__button {
+    display: inline-flex;       
+    align-items: center;       
+    justify-content: center;    
+    padding: 12px 32px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 16px;
+    white-space: nowrap;        
+    cursor: pointer;
+    color: #fff;
 }
 
 
@@ -998,6 +1008,11 @@ ease;
   .nav__links {
     display: none; 
   }
+
+  .btn__menu {
+        display: block;
+    }
+
 
   /* HEADER */
   header .row {
@@ -1161,9 +1176,7 @@ ease;
     position: relative;
   }
 
-  .header__email__btn {
-    width: 100%;
-  }
+ 
 
   /* FEATURES */
   .feature {
@@ -1204,12 +1217,15 @@ ease;
     flex-direction: column;
   }
 
+
   /* PRICING */
   .plans {
     flex-direction: column;
     align-items: center;
   }
-
+#features .section__title, #pricing .section__title {
+    text-align: center;
+}
   .plan {
     width: 100%;
     max-width: 100%;
@@ -1228,6 +1244,31 @@ ease;
   .testimonial__button {
     padding: 12px;
   }
+}
+
+@media (max-width: 1024px) {
+    .start__row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .start__buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    .start__buttons {
+        width: auto;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .start__button:nth-child(2) {
+        margin-top: 16px;
+    }
 }
 
 /* 
@@ -1307,4 +1348,42 @@ IMAGE RESPONSIVENESS */
   .testimonials__img {
     max-width: 100%;
   }
+}
+
+
+@media (max-width: 640px) {
+    .header__email--btn {
+        width: 100%;
+        padding: 16px 0;
+        margin: 16px 0;
+        margin-bottom: 0px;
+        line-height: 1.5;
+    }
+}
+
+.header__email--btn {
+    z-index: 2;
+    margin: 8px;
+    height: calc(100% - 16px);
+    border-radius: 500px;
+    width: 160px;
+    border: none;
+    background-color: #6415ff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 300ms 
+ease;
+}
+button {
+    cursor: pointer;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .quality__description, .steps__description, .values__description, .testimonials__description {
+        padding: 0;
+        margin-top: 64px;
+        text-align: center;
+    }
 }
