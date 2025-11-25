@@ -657,7 +657,7 @@ VALUES
 .value {
    margin-top: 2rem;
    margin-right: 2rem;
-   align-items: flex-start;
+   align-items: center;
    display: flex;
    flex-direction: column;
 }
