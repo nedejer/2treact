@@ -46,8 +46,7 @@ section {
    font-size: 14px;
    color: #fff;
    font-weight: bold;
-   transition: all 300ms
-ease;
+   transition: all 300ms ease;
    cursor: pointer;
 }
 /*
@@ -130,105 +129,7 @@ button {
    border: none;
 }
 
-.menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 378px;
-    margin: 24px 16px;
-    padding: 32px;
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    z-index: 4;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(300%);
-    transition: all 0.3s ease;
-}
 
-body.menu--open .menu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
-}
- .btn__menu {
-    background: transparent; /* no background */
-    border: none;            /* remove border */
-    font-size: 28px;         /* adjust size if needed */
-    cursor: pointer;
-    padding: 0;              /* remove extra padding */
-}
-
-.menu__close {
-    background: transparent;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
-    position: absolute;
-    top: 16px;
-    right: 16px;    /* moves it to the top-right corner */
-}
-
-
-
-.menu__links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu__links {
-    list-style: none;   /* remove bullets */
-    padding: 0;         /* remove default padding */
-    margin: 60px 0 0 0; /* space below X button */
-    display: flex;
-    flex-direction: column;
-    gap: 24px;          /* space between items */
-}
-
-.menu__links li a {
-    text-decoration: none;
-    color: rgb(36, 62, 99);
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.menu {
-    background-color: #fff; /* white background */
-    border: none;           /* remove border if you want */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional subtle shadow */
-}
-
-
-.menu__list {
-  padding: 32px 0;
-}
-
-.menu__link {
-  font-size: 40px;
-
-}
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 378px;
-    margin: 24px 16px;
-    padding: 32px;
-    background-color: #fff;
-    border: 1px solid rgb(229, 231, 235);
-    border-radius: 8px;
-    z-index: 4;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(300%);
-    transition: all 300ms 
-ease;
-}
 
 
 /*
@@ -238,7 +139,6 @@ HEADER
 
 
 */
-
 
 
 
@@ -349,10 +249,6 @@ FEATURES
 */
 
 
-
-
-
-
 .container{
    padding: 96px 0;
 }
@@ -418,7 +314,7 @@ FEATURES
 
 .feature__row{
 display: flex;
-align-items: center;
+align-items: flex-start;
 padding: 32px 24px;
 }
 
@@ -480,11 +376,7 @@ QUALITY
 }
 
 
-.quality__img--wrapper img {
-   width: auto;    /* let it use its natural size */
-   max-width: none; /* don’t force scaling */
-   display: block;
- }
+
   #quality .btn {
    margin-top: 32px;
 }
@@ -658,7 +550,7 @@ VALUES
    margin-top: 2rem;
    margin-right: 2rem;
    align-items: center;
-   display: flex;
+   display: flex-start;
    flex-direction: column;
 }
 
@@ -825,6 +717,11 @@ PRICING
    padding: 2rem;
 }
 
+.plan:nth-child(2) .plan__middle {
+    border-top: 2px solid rgb(102, 126, 234);
+    border-bottom: 2px solid rgb(102, 126, 234);
+}
+
 
 .plan__target {
    font-size: 20px;
@@ -857,8 +754,7 @@ PRICING
    padding: 0.75rem 2rem;
    font-weight: 700;
    color: rgb(247 250 252);
-   transition: all 300ms
-ease;
+   transition: all 300ms ease;
    width: 100%;
    border-radius: 9999px;
    padding-top: 1rem;
@@ -1258,487 +1154,92 @@ ease;
 }
 
 
-/* === RESPONSIVE STYLES === */
-
-
 /*
-  TABLETS (max-width: 1024px) */
-@media (max-width: 1024px) {
 
+RESPONSIVENESS
 
- /* General spacing */
- .container {
-   padding: 64px 0;
- }
+*/
 
-
- section {
-   padding: 0 24px;
- }
-
-
- h1 {
-   font-size: 40px;
- }
-
-
- .section__title {
-   font-size: 40px;
- }
-
-
- /* NAV */
- .nav__links {
-   display: none;
- }
-
-
- .btn__menu {
-       display: block;
+@media (max-width: 1025px) {
+   header .row{
+      flex-direction: column;
+      align-items: center;
    }
 
-
-
-
- /* HEADER */
- header .row {
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
- }
-
-
- .header__description {
-   width: 100%;
- }
-
-
- .header__img--wrapper {
-   width: 100%;
-   margin-top: 40px;
- }
-
-
- .header__email {
-   justify-content: center;
-   max-width: 400px;
-   margin: 0 auto;
- }
-
-
- /* FEATURES */
- .feature {
-   width: 50%;
- }
-
-
- /* QUALITY */
- #quality .row {
-   flex-direction: column-reverse;
-   text-align: center;
- }
-
-
- .quality__description,
- .quality__img--wrapper {
-   width: 100%;
-   margin: 0;
- }
-
-
- .quality__description {
-   margin-top: 40px;
- }
-
-
- /* STEPS */
- #steps .row {
-   flex-direction: column;
-   text-align: center;
- }
-
-
- .steps__description,
- .steps__img--wrapper {
-   width: 100%;
-   padding: 0;
- }
-
-
- .step {
-   justify-content: center;
- }
-
-
- /* VALUES */
- #values .row {
-   flex-direction: column-reverse;
-   text-align: center;
- }
-
-
- .values__description,
- .values__img {
-   width: 100%;
-   padding: 0;
- }
-
-
- .values__list {
-   flex-direction: column;
-   align-items: center;
- }
-
-
- .value {
-   margin-right: 0;
- }
-
-
- /* PRICING */
- .plans {
-   flex-direction: column;
-   align-items: center;
- }
-
-
- .plan {
-   max-width: 100%;
-   margin-right: 0;
-   margin-bottom: 32px;
- }
-
-
- /* TESTIMONIALS */
- #testimonials .row {
-   flex-direction: column;
-   text-align: center;
- }
-
-
- .testimonials__description {
-   width: 100%;
-   padding-left: 0;
- }
-
-
- .testimonial__bottom {
-   flex-direction: column;
-   align-items: center;
- }
-
-
- .testimonial__profile {
-   flex-direction: column;
- }
-
-
- .testimonial__details {
-   margin-left: 0;
-   margin-top: 16px;
- }
-}
-
-
-/*
-  MOBILE (max-width: 768px)
-   */
-@media (max-width: 768px) {
-
-
- /* GENERAL */
- h1 {
-   font-size: 32px;
- }
-
-
- p, .section__para {
-   font-size: 16px;
- }
-
-
- .section__title {
-   font-size: 32px;
- }
-
-
- .btn {
-   padding: 10px 24px;
-   font-size: 13px;
- }
-
-
- /* HEADER */
- header .row {
-   flex-direction: column;
-   text-align: center;
- }
-
-
- .header__description {
-   width: 100%;
- }
-
-
- .header__email {
-   flex-direction: column;
-   height: auto;
- }
-
-
- .header__email--input {
-   padding: 14px 20px;
-   margin-bottom: 12px;
-   position: relative;
- }
-
-
-
-
- /* FEATURES */
- .feature {
-   width: 100%;
- }
-
-
- .feature__row {
-   justify-content: center;
-   text-align: center;
-   flex-direction: column;
- }
-
-
- .feature__text {
-   align-items: center;
-   text-align: center;
-   margin: 16px 0 0;
- }
-
-
- /* QUALITY */
- .quality__description {
-   padding: 0;
- }
-
-
- /* STEPS */
- .step {
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
- }
-
-
- .step__description {
-   margin-left: 0;
-   margin-top: 12px;
- }
-
-
- /* VALUES */
- .values__list {
-   flex-direction: column;
- }
-
-
-
-
- /* PRICING */
- .plans {
-   flex-direction: column;
-   align-items: center;
- }
-#features .section__title, #pricing .section__title {
-   text-align: center;
-}
- .plan {
-   width: 100%;
-   max-width: 100%;
- }
-
-
- /* TESTIMONIALS */
- #testimonials .row {
-   flex-direction: column;
- }
-
-
- .testimonial__img {
-   width: 64px;
-   height: 64px;
- }
-
-
- .testimonial__button {
-   padding: 12px;
- }
-}
-
-
-@media (max-width: 1024px) {
-   .start__row {
-       flex-direction: column;
-   }
-}
-
-
-@media (max-width: 640px) {
-   .start__buttons {
-       flex-direction: column;
-   }
-}
-
-
-@media (max-width: 1024px) {
-   .start__buttons {
-       width: auto;
-       margin-top: 24px;
-   }
-}
-
-
-@media (max-width: 640px) {
-   .start__button:nth-child(2) {
-       margin-top: 16px;
-   }
-}
-
-
-/*
-  SMALL PHONES (max-width: 480px)
-   */
-@media (max-width: 480px) {
- h1 {
-   font-size: 26px;
- }
-
-
- .section__title {
-   font-size: 26px;
- }
-
-
- p, .section__para {
-   font-size: 15px;
- }
-
-
- .btn {
-   width: 100%;
- }
-
-
- .header__customers {
-   width: 100%;
- }
-
-
- .feature__para {
-   font-size: 14px;
- }
-
-
- .step__number {
-   font-size: 28px;
- }
-
-
- .plan__price {
-   font-size: 36px;
- }
-
-
- .testimonial__para {
-   font-size: 14px;
- }
-}
-
-
-
-
-/*
-IMAGE RESPONSIVENESS */
-
-
-.values__img--photo,
-.testimonials__img {
- width: 100%;
- height: auto;
- max-width: 600px;
- display: block;
- margin: 0 auto;
-}
-
-
-/* Tablet adjustments */
-@media (max-width: 1024px) {
- .values__img--photo,
- .testimonials__img {
-   max-width: 500px;
- }
-}
-
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
- .values__img--photo,
- .testimonials__img {
-   max-width: 100%;
-   width: 100%;
- }
-}
-
-
-/* Small phones */
-@media (max-width: 480px) {
- .values__img--photo,
- .testimonials__img {
-   max-width: 100%;
- }
-}
-
-
-
-
-@media (max-width: 640px) {
-   .header__email--btn {
-       width: 100%;
-       padding: 16px 0;
-       margin: 16px 0;
-       margin-bottom: 0px;
-       line-height: 1.5;
-   }
-}
-
-
-
-
-
-@media (max-width: 768px) {
-   .quality__description, .steps__description, .values__description, .testimonials__description {
-       padding: 0;
-       margin-top: 64px;
-       text-align: center;
-   }
-}
-
-
-
-
-
-/* Hide burger menu on larger screens */
-.btn__menu {
-    display: none; /* hidden by default */
-}
-
-/* Show burger menu only on tablets and smaller */
-@media (max-width: 768px) {
-    .btn__menu {
-        display: block; /* visible */
+    .header__description {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .header__description, 
+    .header__img--wrapper {
+        width: 100%;
+        max-width: 512px;
+        margin: 0 auto;
+    }   
+   h1 {
+        font-size: 30px;
+      }
+
+    .features {
+        max-width: 768px;
     }
 
-    /* Optional: hide normal nav links when menu is active on small screens */
-    .nav__links {
-        display: none;
+   .feature__row {
+        padding: 32px 8px;
+        margin: 0 16px;
     }
+
+   .feature {
+       width: calc(50%);
+    }
+
+    .section__title {
+      font-size: 36px;
+    }
+
+   .section__para {
+      font-size: 16px;
+    }
+
+   .values__list {
+      max-width: 20rem;
+      flex-direction: column;
+    }
+
+     #features .section__title, 
+     #pricing .section__title {
+        font-size: 48px;
+    }
+
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+      .start__row {
+        flex-direction: column;
+    }
+
+.start__title {
+        text-align: center;
+        width: 100%;
+        max-width: 512px;
+    }
+
+        .start__buttons {
+        width: auto;
+        margin-top: 24px;
+    }
+
+   }
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width: 480px) {
+
 }
