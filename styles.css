@@ -1376,6 +1376,25 @@ RESPONSIVENESS
    container {
         padding: 80px 0;
     }
+
+        .header__email {
+        flex-direction: column;
+        height: auto;
+    }
+    .header__email--input {
+        position: static;
+        padding: 16px 0;
+        padding-left: 32px;
+        line-height: 1.5;
+    }
+    .header__email--btn {
+        width: 100%;
+        padding: 16px 0;
+        margin: 16px 0;
+        margin-bottom: 0px;
+        line-height: 1.5;
+
+
     #features .section__title, #pricing .section__title {
         font-size: 30px;
     }
