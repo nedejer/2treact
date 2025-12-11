@@ -11,7 +11,7 @@
 </head>
 <body>
     <section id="landing">
-        <nav>
+        <nav class="nav">
             <div class="row nav__row">
                 <div class="nav__logo">
                     <img src="./assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" class="nav__logo--img" alt="">
@@ -25,9 +25,24 @@
                     <a href="" class="nav__link">Log In</a>
                     <a href="" class="nav__link nav__link--primary">Sign Up</a>
                 </div>
-                <button class="btn__menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+    
+
+  <!-- Burger icon -->
+  <button class="nav__burger" onclick="openMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="mobile__menu">
+  <button class="menu__close" onclick="closeMenu()">✕</button>
+   <a href="" class="nav__link">About</a>
+                    <a href="" class="nav__link">Blog</a>
+                    <a href="" class="nav__link">Pricing</a>
+                    <a href="" class="nav__link">Contact Us</a>
+                    <a href="" class="nav__link">Log In</a>
+</div>
+
+
             </div>
         </nav>
         <header>
