@@ -1261,7 +1261,7 @@ RESPONSIVENESS
 
     .section__title {
       font-size: 36px;
-      text-align: center;
+      
     }
 
    .section__para {
@@ -1276,6 +1276,7 @@ RESPONSIVENESS
      #features .section__title, 
      #pricing .section__title {
         font-size: 48px;
+        text-align: center;
     }
 
     .plans {
