@@ -385,8 +385,6 @@ QUALITY
 
  .quality__img--wrapper img {
    width: 100%;        /* fits into the 50% wrapper */
-   max-width: 768px;   /* cap it so it doesn’t blow up */
-   min-width: 500px;   /* optional: stops it from shrinking too early */
    height: auto;
    display: block;
  }
@@ -547,7 +545,6 @@ VALUES
 
 .value {
    margin-top: 2rem;
-   margin-right: 2rem;
    align-items: center;
    display: flex-start;
    flex-direction: column;
@@ -634,7 +631,6 @@ PRICING
    background-color: rgb(255 255 255);
    padding-left: 2rem;
    padding-right: 2rem;
-   margin-right: 2rem;
    padding-top: 0.5rem;
    text-align: center;
    color: rgb(26 32 44);
@@ -1417,6 +1413,7 @@ RESPONSIVENESS
         .feature__para {
         margin-top: 4px;
         line-height: 2;
+        text-align: center;
     }
     
     .testimonial__bottom {
@@ -1461,4 +1458,4 @@ RESPONSIVENESS
         text-align: center;
         align-items: center;
     }
-}
+   }
